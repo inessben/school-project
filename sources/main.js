@@ -127,27 +127,27 @@ gltfLoader.load
     }
 )
 
-let castlefOUR
+let castleFour
 gltfLoader.load
 (
     '/decor/castle.glb',
     (gltf) => 
     {
-        castlefOUR = gltf.scene
+        castleFour = gltf.scene
 
-        castlefOUR.traverse((child) => 
+        castleFour.traverse((child) => 
         {
             if(child.isMesh)
                 child.castShadow = true
                 child.receiveShadow = true
         })
 
-        castlefOUR.scale.set(350, 350, 350)
-        castlefOUR.position.x= -2600
-        castlefOUR.position.y= 500
-        castlefOUR.position.z= -2700
-        castlefOUR.rotation.y = Math.PI * 0.5
-        scene.add(castlefOUR)
+        castleFour.scale.set(350, 350, 350)
+        castleFour.position.x= -2400
+        castleFour.position.y= 500
+        castleFour.position.z= -2700
+        castleFour.rotation.y = Math.PI * 0.5
+        scene.add(castleFour)
     }
 )
 
