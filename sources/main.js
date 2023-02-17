@@ -314,7 +314,7 @@ function stopAfterDelay() {
     isStopped = true
 }
 // délai de 25 secondes
-setTimeout(stopAfterDelay, 25000) 
+setTimeout(stopAfterDelay, 28000) 
 
 // requestAnimationFrame
 const loop = () =>
