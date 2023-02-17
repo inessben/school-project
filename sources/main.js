@@ -143,7 +143,7 @@ gltfLoader.load
         })
 
         castleFour.scale.set(350, 350, 350)
-        castleFour.position.x= -2400
+        castleFour.position.x= -2900
         castleFour.position.y= 500
         castleFour.position.z= -2700
         castleFour.rotation.y = Math.PI * 0.5
