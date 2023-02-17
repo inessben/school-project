@@ -212,11 +212,10 @@ scene.add(floor)
 
 // add the igs logo
 const logo = new THREE.Mesh(
-    new THREE.BoxGeometry(82, 82, 82),
+    new THREE.BoxGeometry(50, 50, 50),
     new THREE.MeshStandardMaterial({ color: 0xdddddd, map: logoTexture })
 )
 logo.position.x = 1
-// logo.rotation.x = -0.2
 logo.position.y = 45
 logo.rotation.y = 5
 logo.position.z = -1000
@@ -322,7 +321,7 @@ let isStopped = false
 function stopAfterDelay() {
     isStopped = true
 }
-// délai de 25 secondes
+// délai de 35 secondes
 setTimeout(stopAfterDelay, 35000) 
 
 // requestAnimationFrame
