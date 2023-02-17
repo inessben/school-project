@@ -1,6 +1,6 @@
 import './style.css'
 import * as THREE from 'three'
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+// import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { Water } from 'three/addons/objects/Water.js'
 import { Sky } from 'three/addons/objects/Sky.js'
 import { GLTFLoader } from'three/addons/loaders/GLTFLoader.js'
@@ -10,7 +10,7 @@ import { TextGeometry } from './modules/TextGeometry.js'
 import gsap from 'gsap'
 
 // Loaders
-// 
+//
 // draco
 const dracoLoader = new DRACOLoader()
 dracoLoader.setDecoderPath('/draco/')
@@ -218,10 +218,10 @@ scene.add(logo)
 // clic on the box
 logo.addEventListener('click', function() {
     console.log(logo)
-    // const planeGeometry = new THREE.PlaneGeometry( 1000, 1000 )
-    // const planeMaterial = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} )
-    // const plane = new THREE.Mesh( planeGeometry, planeMaterial )
-    // logo.add( plane )
+    const planeGeometry = new THREE.PlaneGeometry( 1000, 1000 )
+    const planeMaterial = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} )
+    const plane = new THREE.Mesh( planeGeometry, planeMaterial )
+    logo.add( plane )
 })
 
 //  GSAP to animate the cube
@@ -303,13 +303,13 @@ window.addEventListener('keydown', function(e) {
 })
 
 // Orbit Controls
-const controls = new OrbitControls( camera,  renderer.domElement )
-controls.enableDamping = true
-controls.maxPolarAngle = Math.PI * 0.495
-controls.target.set( 0, 10, 0 )
-controls.minDistance = 40.0
-controls.maxDistance = 200.0
-controls.update()
+// const controls = new OrbitControls( camera,  renderer.domElement )
+// controls.enableDamping = true
+// controls.maxPolarAngle = Math.PI * 0.495
+// controls.target.set( 0, 10, 0 )
+// controls.minDistance = 40.0
+// controls.maxDistance = 200.0
+// controls.update()
 
 
 let isStopped = false
@@ -325,7 +325,7 @@ const loop = () =>
     window.requestAnimationFrame(loop)
 
     // Update controls
-    controls.update()
+    // controls.update()
 
     // Render
     renderer.render(scene, camera)
