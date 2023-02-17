@@ -199,21 +199,6 @@ renderer.setPixelRatio( window.devicePixelRatio )
 document.body.appendChild(renderer.domElement)
 renderer.toneMapping = THREE.ACESFilmicToneMapping
 
-const loader = new FontLoader()
-loader.load( 'sources/font/oswald.json', function ( oswald ) {
-	const spaceBar = new TextGeometry( 'Hello three.js!', {
-		font: oswald,
-		size: 80,
-		height: 5,
-		curveSegments: 12,
-		bevelEnabled: true,
-		bevelThickness: 10,
-		bevelSize: 8,
-		bevelOffset: 0,
-		bevelSegments: 5
-	} )
-} )
-
 // add a floor
 let floor = new THREE.Mesh(
     new THREE.BoxGeometry(3000, 20, 10000),
@@ -338,7 +323,7 @@ function stopAfterDelay() {
     isStopped = true
 }
 // délai de 25 secondes
-setTimeout(stopAfterDelay, 32000) 
+setTimeout(stopAfterDelay, 34000) 
 
 // requestAnimationFrame
 const loop = () =>
