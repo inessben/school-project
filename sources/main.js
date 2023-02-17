@@ -127,6 +127,30 @@ gltfLoader.load
     }
 )
 
+let castlefOUR
+gltfLoader.load
+(
+    '/decor/castle.glb',
+    (gltf) => 
+    {
+        castlefOUR = gltf.scene
+
+        castlefOUR.traverse((child) => 
+        {
+            if(child.isMesh)
+                child.castShadow = true
+                child.receiveShadow = true
+        })
+
+        castlefOUR.scale.set(350, 350, 350)
+        castlefOUR.position.x= -2600
+        castlefOUR.position.y= 500
+        castlefOUR.position.z= -2700
+        castlefOUR.rotation.y = Math.PI * 0.5
+        scene.add(castlefOUR)
+    }
+)
+
 // add a scene
 const scene = new THREE.Scene()
 
@@ -314,7 +338,7 @@ function stopAfterDelay() {
     isStopped = true
 }
 // délai de 25 secondes
-setTimeout(stopAfterDelay, 28000) 
+setTimeout(stopAfterDelay, 29000) 
 
 // requestAnimationFrame
 const loop = () =>
