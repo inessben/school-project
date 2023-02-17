@@ -152,7 +152,7 @@ window.addEventListener('resize', () =>
 })
 
 // add a camera
-const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 20000 )
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 20000 )
 camera.position.set( 8, 8, 8 )
 scene.add(camera)
 
@@ -176,9 +176,7 @@ document.body.appendChild(renderer.domElement)
 renderer.toneMapping = THREE.ACESFilmicToneMapping
 
 const loader = new FontLoader()
-
 loader.load( 'sources/font/oswald.json', function ( oswald ) {
-
 	const spaceBar = new TextGeometry( 'Hello three.js!', {
 		font: oswald,
 		size: 80,
@@ -310,7 +308,6 @@ window.addEventListener('keydown', function(e) {
 // controls.minDistance = 40.0
 // controls.maxDistance = 200.0
 // controls.update()
-
 
 let isStopped = false
 function stopAfterDelay() {
